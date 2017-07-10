@@ -13,6 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 import br.ufpi.estagio.cge.sistema.excecoes.DispersaoException;
 import br.ufpi.estagio.cge.sistema.excecoes.DistribuicaoGastoException;
 import br.ufpi.estagio.cge.sistema.excecoes.FaixaEtariaException;
+import br.ufpi.estagio.cge.sistema.excecoes.ListarCargosException;
+import br.ufpi.estagio.cge.sistema.excecoes.ListarCategoriasException;
+import br.ufpi.estagio.cge.sistema.excecoes.ListarOrgaosException;
 import br.ufpi.estagio.cge.sistema.excecoes.MapaDemograficoException;
 import br.ufpi.estagio.cge.sistema.excecoes.MediaSalarioException;
 import br.ufpi.estagio.cge.sistema.excecoes.PiramideException;
@@ -43,11 +46,11 @@ public class HomeController {
 	 * @throws MediaSalarioException 
 	 */
 	@RequestMapping(value = "/mediaSalarial", method = RequestMethod.GET)
-	public String mediaSalarial() throws MediaSalarioException{
+	public String mediaSalarial() throws MediaSalarioException, ListarCargosException,ListarCategoriasException,ListarOrgaosException{
 		
-		//return "mediaSalarial";
+		return "mediaSalarial";
 		
-		throw new MediaSalarioException("Teste!");
+		//throw new MediaSalarioException("Teste!");
 	}
 	
 	@ExceptionHandler(MediaSalarioException.class)
@@ -67,7 +70,7 @@ public class HomeController {
 	 * @return - view piramideHierarrquica
 	 */
 	@RequestMapping(value = "/piramideHierarquica", method = RequestMethod.GET)
-	public String piramideHierarquica() throws PiramideException{
+	public String piramideHierarquica() throws PiramideException, ListarCargosException,ListarCategoriasException,ListarOrgaosException{
 		
 		return "piramideHierarquica";
 	}
@@ -90,7 +93,7 @@ public class HomeController {
 	 * @return - view dispersaoServidores
 	 */
 	@RequestMapping(value = "/dispersaoServidores", method = RequestMethod.GET)
-	public String curvaPadrao() throws DispersaoException {
+	public String curvaPadrao() throws DispersaoException, ListarCargosException,ListarCategoriasException,ListarOrgaosException {
 		
 		return "dispersaoServidores";
 	}
@@ -137,7 +140,7 @@ public class HomeController {
 	 * @return - view faixaEtaria
 	 */
 	@RequestMapping(value = "/faixa", method = RequestMethod.GET)
-	public String faixaEtaria() throws FaixaEtariaException {
+	public String faixaEtaria() throws FaixaEtariaException, ListarCargosException,ListarCategoriasException,ListarOrgaosException {
 		
 		return "faixaEtaria";
 	}
@@ -162,7 +165,7 @@ public class HomeController {
 	 * @return - view porcentagemGasto
 	 */
 	@RequestMapping(value = "/porcentagemGasto", method = RequestMethod.GET)
-	public String procentagemGasto() throws DistribuicaoGastoException {
+	public String procentagemGasto() throws DistribuicaoGastoException, ListarCargosException,ListarCategoriasException,ListarOrgaosException {
 		
 		return "porcentagemGasto";
 	}
@@ -186,7 +189,7 @@ public class HomeController {
 	 * @return - view somaSalarial
 	 */
 	@RequestMapping(value = "/somaSalarial", method = RequestMethod.GET)
-	public String somaSalarial() throws SomaSalarioException {
+	public String somaSalarial() throws SomaSalarioException, ListarCargosException,ListarCategoriasException,ListarOrgaosException {
 		
 		return "somaSalarial";
 	}

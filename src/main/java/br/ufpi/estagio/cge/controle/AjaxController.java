@@ -47,8 +47,6 @@ import br.ufpi.estagio.cge.sistema.exportarExcel.ExportarExcel;
 @RestController
 public class AjaxController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(AjaxController.class);
-	
 
 	/**
 	 * Metodo que retorna todos os cargos
