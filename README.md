@@ -1,6 +1,6 @@
 # DataMiningCGE
 
-## PROCEIMENTOS PARA EXECUTAR O PROJETO
+## PROCEDIMENTOS PARA EXECUTAR O PROJETO
 1. Adicione o projeto no Tomcat 
 1. Starta o servidor Tomcat
 1. Acesse pelo navegador o seguinte endereço: 
